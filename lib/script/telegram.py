@@ -13,7 +13,7 @@ class Telegram(Script):
 
     def connect(self):
         try:
-            self._connect = telepot.Bot('265058909:AAEN0g4PeqXie-AZPfEGmsfQsBEzDkTuUhw')
+            self._connect = telepot.Bot('Key de telegram')
             pprint(self._connect.getMe())
             return 1
         except (NameError, ValueError):
