@@ -20,3 +20,10 @@ mysql> quit;
 
 # Uso
 python app.py
+
+# Nuevo Servicio
+Para que el bot conozca un nuevo servicio, se agrega una entrada en la base de datos. 
+* En la tabla web_services ejecutamos la siguiente linea:
+  * INSERT INTO leviathan.web_services (endpoint,name,keywords,datekeyword) VALUES ('servicesName:port','helloWorld',"{'hola':0}",now())
+
+Gracias a la sentencia anterior, el bot puede entender lo siguiente: Si en el texto que escribio el usuario se encuentra un "hola" entonces debe mandarl al servicio con url "servicesName:port" el texto ingresado. El name es un simple nombre para definir los servicios; en el parametro 3 {'hola':0} se pueden agregar mas palabra si se desea como por ejemplo {'hola':0,'adios':0} y es posible porque un mismo endpoint puede contener varios microservicios.
